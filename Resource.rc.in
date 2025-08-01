@@ -67,12 +67,12 @@ BEGIN
         BLOCK "080404b0"
         BEGIN
             VALUE "CompanyName", "LinkSense Co., Ltd."
-            VALUE "FileDescription", ""
+            VALUE "FileDescription", "@LIB_FILEDESCRIPTION@"
             VALUE "FileVersion", "@LIB_FILEVERSION@"
-            VALUE "InternalName", ""
+            VALUE "InternalName", "@LIB_INTERNALNAME@"
             VALUE "LegalCopyright", "Copyright (C) 2023"
             VALUE "OriginalFilename", "@LIB_FILENAME@"
-            VALUE "ProductName", ""
+            VALUE "ProductName", "@LIB_PRODUCTNAME@"
             VALUE "ProductVersion", "@LIB_VERSION_NUMBER@"
         END
     END

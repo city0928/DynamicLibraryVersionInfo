@@ -7,14 +7,18 @@ message(STATUS ${LIB_NAME} ", LIB_VER:" ${LIB_VER})
 string(REPLACE "." "," VERSION_FILE ${LIB_VER})
 message(STATUS ${LIB_NAME} ", VERSION_FILE: " ${VERSION_FILE})
 
-# out info varibles
-set(LIB_FILEVERSION ${VERSION_FILE})
-set(LIB_VERSION_NUMBER ${LIB_VER})
-set(LIB_FILENAME ${LIB_NAME})
 add_definitions(-DLINKSENSEVERSION=":${LIB_VERSION_NUMBER}")
 configure_file(
     ${CMAKE_CURRENT_LIST_DIR}/Resource.rc.in
     ${CMAKE_CURRENT_LIST_DIR}/Resource.rc
     @ONLY)
+
+# out info varibles
+set(LIB_FILEVERSION ${VERSION_FILE})
+set(LIB_VERSION_NUMBER ${LIB_VER})
+set(LIB_FILENAME ${LIB_NAME})
+set(LIB_FILEDESCRIPTION "这是文件描述！")
+set(LIB_INTERNALNAME "这是内部名称！")
+set(LIB_PRODUCTNAME "这是产品名称！")
 set(LIB_VERSION_FILES ${CMAKE_CURRENT_LIST_DIR}/Resource.rc ${CMAKE_CURRENT_LIST_DIR}/resource.h)
 message(STATUS ${PROJECT_NAME} "LIB_VERSION_FILES: " ${LIB_VERSION_FILES})
